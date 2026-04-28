@@ -1,4 +1,4 @@
-# Midi2Building
+# Midi2Building v0.9
 
 A tool for making a plugin timing a MIDI file to the construction of a Minecraft build.
 
@@ -20,26 +20,7 @@ A tool for making a plugin timing a MIDI file to the construction of a Minecraft
 ### Requested Features
 * Make some smart way to control the order of the blocks placed.
 
-## Technical Stuff
+## Contributing
 
-### Contributing
+If you want to contribute, wonderful! Please see `Contributing.md`. If you want to see more of the technical side of things, take a peak in there, too. Most of the technical work has been confined there.
 
-If you want to contribute, wonderful! Please see `Contributing.md`
-
-### General Project Structure
-```
-.
-├── src/main
-│   ├── java/me/melonboy10/midi2building
-│   │   ├── conversion (code to convert midi to usable data)
-│   │   ├── screenElements (gui code)
-│   │   ├── util (extra utilities)
-│   │   └── Main.java
-│   └── resources
-│       ├── defualtSongs (default files for testing and demoing)
-│       │   ├── defaultMidi (default midi files)
-│       │   └── defaultStructure (default structure files)
-│       └── gui (images and font files for the gui)
-├── README.md
-└── Contributing.md
-```
