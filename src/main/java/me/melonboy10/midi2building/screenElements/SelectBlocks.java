@@ -163,7 +163,7 @@ public class SelectBlocks extends Stage {
             if(conversion.getIsInstantiated())
                 changeOctave(currentOctave);
         });
-        gridPane.add(goToC4,8,5);
+        gridPane.add(goToC4,9,5);
 
 
         downOneOctave = new Canvas(18*scale,18*scale);
@@ -280,7 +280,7 @@ public class SelectBlocks extends Stage {
         // Adding the change octave text
         int realOctave = octave + 2;
         for (int i = 1; i <= 5; i++) {
-            Text noteName = i == 3 ? new Text("C4") : new Text("C" + String.valueOf(realOctave));
+            Text noteName = new Text("C" + String.valueOf(realOctave));
 
             noteName.setFont(minecraftiaChest);
             noteName.setFill(Color.rgb(255, 255, 255)); // Pure White
@@ -294,6 +294,18 @@ public class SelectBlocks extends Stage {
 
             realOctave--;
         }
+
+        Text noteName = new Text("C4");
+
+        noteName.setFont(minecraftiaChest);
+        noteName.setFill(Color.rgb(255, 255, 255)); // Pure White
+        gridPane.add(noteName, 9, 5);
+        textNodes.add(noteName);
+
+        GridPane.setValignment(noteName,VPos.BOTTOM);
+        GridPane.setHalignment(noteName,HPos.RIGHT);
+        GridPane.setMargin(noteName, new Insets(0,0,-3*scale,0)); // Moves the text to the right place
+        noteName.setEffect(textShadow);
 
         // Bringing buttons to the front so they can be clicked
         upTwoOctaves.toFront();
